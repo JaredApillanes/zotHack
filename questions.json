@@ -53,5 +53,71 @@
     "hint1": "hand",
     "hint2": "hook",
     "hint3": "man hook car man hook door"
+  },
+  "Annie": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Voiced by the same person that did Amumu and Nunu",
+    "hint2": "Has the third highest amount of skins in the game",
+    "hint3": "Ult has the highest AP cast ratio"
+  },
+  "Singed": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "One of the first six champions designed by Riot",
+    "hint2": "Dance references the Fresh Prince of Bel-Air",
+    "hint3": "\"Shaken, not stirred\""
+  },
+  "Senna": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Does not gain AD upon level-up",
+    "hint2": "Longest Attack frame in the game",
+    "hint3": "Present in lore before being released as a champion"
+  },
+  "Sylas": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Has an animation for a cancelled recall",
+    "hint2": "Had Blooming Burst as an ability in development",
+    "hint3": "In early 30s"
+  },
+  "Aatrox": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Has no AP ratios",
+    "hint2": "Had an in-development ability where he \"Creating a “war zone” that grants those who died in it reduced death timers and would respawn allies at the closest structure.\"",
+    "hint3": "between 4396 – 5996 years old"
+  },
+  "Varus": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "One of the few champions to apply CC on themself",
+    "hint2": "Is technically nude",
+    "hint3": "\"The cost of your life is one arrow.\""
   }
 }
