@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="925841f7-6620-4fe2-bfbc-272b2496641a" name="Default Changelist" comment="added home page js">
+    <list default="true" id="925841f7-6620-4fe2-bfbc-272b2496641a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Home/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/Home/league-of-legends-logo.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +32,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tangy\Desktop\zotHacks\zotHack\src\app\views\Home" />
+      <recent name="C:\Users\Tangy\Desktop\zotHacks\zotHack\public" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573412456774</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added username">
+      <created>1573413828933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573413828933</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added home page js" />
-    <option name="LAST_COMMIT_MESSAGE" value="added home page js" />
+    <MESSAGE value="added username" />
+    <option name="LAST_COMMIT_MESSAGE" value="added username" />
   </component>
 </project>
