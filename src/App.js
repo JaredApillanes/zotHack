@@ -4,6 +4,7 @@ import history from './history.js';
 import './App.css';
 import Home from './app/views/Home/Home'
 import Play from './app/views/Play/Play'
+import ScoreScreen from "./app/views/ScoreScreen/ScoreScreen";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route exact path='/Play' component={Play}/>
+                    <Route exact path='/Score' component={ScoreScreen}/>
                 </Switch>
             </Router>
         </div>
