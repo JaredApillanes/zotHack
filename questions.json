@@ -2,10 +2,10 @@
   "Pantheon": {
     "name": "Pantheon",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/59_pantheon_spearshot_oc_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/55_pantheon_leapbash_oh_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/54_pantheon_heartseeker_spear_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/43_pantheon_grandskyfall_land_2.wav"
     ],
     "hint1": "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
     "hint2": "Name means 'Untrembling'",
@@ -14,10 +14,10 @@
   "Zilean": {
     "name": "Zilean",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/05_chronokeeper_timebomb_OBA_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/12_chronokeeper_timewarp_OBA_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/01_Chronokeeper_ChronoRevive_OBA.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/22_Chronokeepers_BasicAttack_oml.wav"
     ],
     "hint1": "confirmed to be the last Icathian mage",
     "hint2": "During development he was called Narib Newmaiss",
@@ -26,10 +26,10 @@
   "Blitzcrank": {
     "name": "Blitzcrank",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/37_steamgolem_rocketgrab_oc_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/33_steamgolem_overdrive_obd_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/35_steamgolem_powerfist_oba_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/43_steamgolem_staticfield_oba_1.wav"
     ],
     "hint1": "hand",
     "hint2": "hook",
@@ -38,10 +38,10 @@
   "Thresh": {
     "name": "Thresh",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/059_thresh_base_lantern_oml_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/103_thresh_base_sweep_oc_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/088_thresh_base_shackle_oba_drag_.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/076_thresh_base_penta_oba_wall_lo.wav"
     ],
     "hint1": "hand",
     "hint2": "hook",
@@ -50,10 +50,10 @@
   "Annie": {
     "name": "Annie",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/57_annie_base_incinerate_oh_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/70_annie_base_moltenshield_obd_0.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/75_annie_base_pyromania_oba_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/62_annie_base_infernalguardian_o.wav"
     ],
     "hint1": "Voiced by the same person that did Amumu and Nunu",
     "hint2": "Has the third highest amount of skins in the game",
@@ -98,10 +98,10 @@
   "Aatrox": {
     "name": "Aatrox",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/57_aatrox_base_q_oc_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/76_aatrox_base_w_power_oba_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/41_aatrox_base_e_oml_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/61_aatrox_base_r_oc_01.wav"
     ],
     "hint1": "Has no AP ratios",
     "hint2": "Had an in-development ability where he \"Creating a “war zone” that grants those who died in it reduced death timers and would respawn allies at the closest structure.\"",
@@ -110,10 +110,10 @@
   "Varus": {
     "name": "Varus",
     "ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/64_varus_q_oc_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/87_varus_w_oh_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/40_varus_e_oh_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/80_varus_r_oh_03.wav"
     ],
     "hint1": "One of the few champions to apply CC on themself",
     "hint2": "Is technically nude",
