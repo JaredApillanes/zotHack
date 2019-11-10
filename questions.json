@@ -1,57 +1,158 @@
 {
   "Pantheon": {
-    " ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+    "name": "Pantheon",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/59_pantheon_spearshot_oc_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/55_pantheon_leapbash_oh_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/54_pantheon_heartseeker_spear_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/43_pantheon_grandskyfall_land_2.wav"
     ],
     "hint1": "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
     "hint2": "Name means 'Untrembling'",
     "hint3": "Has a secret dream of baking"
   },
   "Zilean": {
-    " ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+    "name": "Zilean",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/05_chronokeeper_timebomb_OBA_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/12_chronokeeper_timewarp_OBA_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/01_Chronokeeper_ChronoRevive_OBA.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_zilean/22_Chronokeepers_BasicAttack_oml.wav"
     ],
     "hint1": "confirmed to be the last Icathian mage",
     "hint2": "During development he was called Narib Newmaiss",
     "hint3": "Has the quote: 'In my day, we would never have allowed an armored bear into the League of Legends'"
   },
-  "Senna": {
-    " ability": [
-      "w",
-      "e",
-      "r",
-      "q"
-    ],
-    "hint1": "big gun",
-    "hint2": "relic gun",
-    "hint3": "screaming cloud"
-  },
   "Blitzcrank": {
-    " ability": [
-      "w",
-      "e",
-      "r",
-      "q"
+    "name": "Blitzcrank",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/37_steamgolem_rocketgrab_oc_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/33_steamgolem_overdrive_obd_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/35_steamgolem_powerfist_oba_1.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_blitzcrank/43_steamgolem_staticfield_oba_1.wav"
     ],
     "hint1": "hand",
     "hint2": "hook",
     "hint3": "man hook car man hook door"
   },
   "Thresh": {
-    " ability": [
+    "name": "Thresh",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/059_thresh_base_lantern_oml_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/103_thresh_base_sweep_oc_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/088_thresh_base_shackle_oba_drag_.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_thresh_base/076_thresh_base_penta_oba_wall_lo.wav"
+    ],
+    "hint1": "hand",
+    "hint2": "hook",
+    "hint3": "man hook car man hook door"
+  },
+  "Annie": {
+    "name": "Annie",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/57_annie_base_incinerate_oh_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/70_annie_base_moltenshield_obd_0.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/75_annie_base_pyromania_oba_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_annie_base/62_annie_base_infernalguardian_o.wav"
+    ],
+    "hint1": "Voiced by the same person that did Amumu and Nunu",
+    "hint2": "Has the third highest amount of skins in the game",
+    "hint3": "Ult has the highest AP cast ratio"
+  },
+  "Singed": {
+    "name": "Singed",
+    "ability": [
       "w",
       "e",
       "r",
       "q"
     ],
-    "hint1": "hand",
-    "hint2": "hook",
-    "hint3": "man hook car man hook door"
+    "hint1": "One of the first six champions designed by Riot",
+    "hint2": "Dance references the Fresh Prince of Bel-Air",
+    "hint3": "\"Shaken, not stirred\""
+  },
+  "Senna": {
+    "name": "Senna",
+    "ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Does not gain AD upon level-up",
+    "hint2": "Longest Attack frame in the game",
+    "hint3": "Present in lore before being released as a champion"
+  },
+  "Sylas": {
+    "name": "Sylas",
+    "ability": [
+      "w",
+      "e",
+      "r",
+      "q"
+    ],
+    "hint1": "Has an animation for a cancelled recall",
+    "hint2": "Had Blooming Burst as an ability in development",
+    "hint3": "In early 30s"
+  },
+  "Aatrox": {
+    "name": "Aatrox",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/57_aatrox_base_q_oc_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/76_aatrox_base_w_power_oba_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/41_aatrox_base_e_oml_03.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_aatrox_base/61_aatrox_base_r_oc_01.wav"
+    ],
+    "hint1": "Has no AP ratios",
+    "hint2": "Had an in-development ability where he \"Creating a “war zone” that grants those who died in it reduced death timers and would respawn allies at the closest structure.\"",
+    "hint3": "between 4396 – 5996 years old"
+  },
+  "Varus": {
+    "name": "Varus",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/64_varus_q_oc_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/87_varus_w_oh_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/40_varus_e_oh_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_varus/80_varus_r_oh_03.wav"
+    ],
+    "hint1": "One of the few champions to apply CC on themself",
+    "hint2": "Is technically nude",
+    "hint3": "\"The cost of your life is one arrow.\""
+  },
+  "Kog'maw": {
+    "name": "Kog'Maw",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/21_kogmaw_causticspittle_oh_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/29_kogmaw_icathiansurprise_screa.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/44_kogmaw_voidooze_oc_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/32_kogmaw_livingartillery_fall_3.wav"
+    ],
+    "hint1": "Only Void-related champion without 'Void' in his title",
+    "hint2": "Terror coming... daddy coming!",
+    "hint3": "blinks one eye at a time and sometimes spins around in a manner resembling dogs chasing their own tail"
+  },
+  "Skarner": {
+    "name": "Skarner",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/36_skarner_fracture_oc_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/27_skarner_crystalexoskeleton_oc.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/61_skarner_virulentslash_oh_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/49_skarner_impale_oc_03.wav"
+    ],
+    "hint1": "My stinger brings ugly death.",
+    "hint2": "I... am... ancient! You are nothing more than an insect to me!",
+    "hint3": "Head is based on Evangelion Unit-01's from Neon Genesis Evangelion"
+  },
+  "Lissandra": {
+    "name": "Lissandra",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/42_lissandra_base_glacialpath_om.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/49_lissandra_base_iceshard_oc_04.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/70_lissandra_base_ringoffrost_oh.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/28_lissandra_base_frozentomb_ene.wav"
+    ],
+    "hint1": "between 8996 and 9996 years old",
+    "hint2": "I will bury the world in ice.",
+    "hint3": "I will restore Freljord's greatness."
   }
 }
