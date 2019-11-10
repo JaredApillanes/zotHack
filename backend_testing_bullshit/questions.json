@@ -1,8 +1,16 @@
 {
-    "Pantheon":
-        {
-            "hint1": "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
-            "hint2": "Name means 'Untrembling'",
-            "hint3": "Has a secret dream of baking"
-        }
-}
+    "champion": [
+      [
+        "Pantheon",
+        "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
+        "Name means 'Untrembling'",
+        "Has a secret dream of baking"
+      ],
+      [
+        "Zilean",
+        "confirmed to be the last Icathian mage",
+        "During development he was called Narib Newmaiss",
+        "Has the quote: 'In my day, we would never have allowed an armored bear into the League of Legends'"
+      ]
+    ]
+  }

@@ -2,14 +2,10 @@ from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 import player
 
+import json
+
 app = Flask(__name__)
 api = Api(app)
-
-TODOS = {
-    'todo1': {'task': 'build an API'},
-    'todo2': {'task': '?????'},
-    'todo3': {'task': 'profit!'},
-}
 
 
 def abort_if_todo_doesnt_exist(_id):
@@ -51,6 +47,9 @@ class TodoList(Resource):
         todo_id = 'todo%i' % todo_id
         TODOS[todo_id] = {'task': args['task']}
         return TODOS[todo_id], 201
+
+class Question(Resource):
+    def 
 
 ##
 ## Actually setup the Api resource routing here
