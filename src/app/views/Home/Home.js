@@ -1,6 +1,7 @@
 import logo from "./league-of-legends-logo.png";
 import React from "react";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 function Home(e) {
     return (
@@ -8,7 +9,13 @@ function Home(e) {
             <header>
             <img src={logo} className="App-logo" alt="logo" />
             </header>
-        <Button variant = 'secondary'>Play</Button>
+          <Form.Group controlId="name">
+              <Form.Text>
+                  Enter Username:
+              </Form.Text>
+                <p></p> <Form.Control placeholder="Enter your name"></Form.Control>
+          </Form.Group>
+            <Button variant = 'secondary'>Test</Button>
         </div>
     )
 }
