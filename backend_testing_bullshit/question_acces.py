@@ -3,27 +3,31 @@ from bson import json_util
 from bson.objectid import ObjectId
 from db import mongo
 
+import json
+
 import datetime
 import traceback
 import random
 
 class Question(Resource):
-    # TODO: Implement get and delete for question
-    def get(self, id):
-        question = mongo.db.questions.find_one({"_id":ObjectId(id)})
-        if question:
-            return json_util._json_convert(question), 200
-        return {'message': 'Question not found'}, 404
+    def __init__(self):
+        with open("questions.json", "r") as read_file:
+            self.unlisted_champs = json.load(read_file)
 
-    def delete(self, id):
-        questions = mongo.db.questions.find_one({"_id":ObjectId(id)})
+    def get(self):
+        champ_num = random.randint(0, len(self.unlisted_champs) - 1)
+        print(champ_num)
+        champion_question = self.unlisted_champs[champ_num]
+        self.unlisted_champs.pop(champ_num)
+        return champion_question
+        # if question:
+        #     return json_util._json_convert(question), 200
+        # return {'message': 'Question not found'}, 404
+    
+    
 
-        if not questions:
-            return {'message':'Question not found'}, 404
-        try:
-            mongo.db.questions.delete_one({"_id":ObjectId(id)})
-        except:
-            return {
-                'message':'An error occured while deleting'
-            }, 500
-        return {'message':'Question was deleted'}, 200
+if __name__ == "__main__":
+    c1 = Question()
+    print(c1.get())
+    print(c1.get())
+    print(c1.get())
