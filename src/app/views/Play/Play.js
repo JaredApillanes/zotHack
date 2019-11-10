@@ -1,12 +1,22 @@
 import React, {useState, useEffect} from "react";
+import Form from "react-bootstrap/Form";
 import './Play.css';
 
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 
 function PlayGame(props) {
-    function audio(e) {
-        document.getElementById("test").play();
+    function audioQ(e) {
+        document.getElementById("Q").play();
+    }
+    function audioW(e) {
+        document.getElementById("W").play();
+    }
+    function audioE(e) {
+        document.getElementById("E").play();
+    }
+      function audioR(e) {
+        document.getElementById("R").play();
     }
 
     const gameId = props.match.params.gameId;
@@ -25,6 +35,15 @@ function PlayGame(props) {
     });
     const [displayQuestion, setDisplayQuestion] = useState(true);
     const [playersArr, setPlayersArr] = useState([]);
+
+    // Answer Validation
+    const [answer, setAnswer] = useState("e")
+    const [iscorrect, setIsCorrect] = useState(false);
+
+    function validateAnswer(champion) {
+      setAnswer(champion)
+    }
+
 
     function renderQuestion() {
         setInitialGet(true);
@@ -81,15 +100,33 @@ function PlayGame(props) {
         <div className="Question">
             <div className="question-stopwatch">
                 <div>
+                    {/*<audio id={'Q'}>*/}
+                    {/*    <source*/}
+                    {/*        src={"Given_URL_Q"}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
-                    <audio id={'test'}>
-                        <source
-                            src={"http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_vi_base/66_vi_base_r_dash_oba_01.wav"}
-                            type={"audio/wav"}>
-                        </source>
-                    </audio>
-                    <Button onClick={audio}>Test</Button>
+                    {/*<audio id={'W'}>*/}
+                    {/*    <source*/}
+                    {/*        src={"Given_URL_W"}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
+                    {/*<audio id={'E'}>*/}
+                    {/*    <source*/}
+                    {/*        src={"Given_URL_E"}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
+
+                    {/*<audio id={'R'}>*/}
+                    {/*    <source*/}
+                    {/*        src={"Given_URL_R"}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
                     <div className="stopwatch">{timeLimit}</div>
                     <div className="game-title">
@@ -100,11 +137,19 @@ function PlayGame(props) {
                         <div>
                             <p className="question">{curQuestion.question}</p>
                             <div className="choices">
-                                <div>Q: {curQuestion.q}</div>
-                                <div>W: {curQuestion.e}</div>
-                                <div>E: {curQuestion.w}</div>
-                                <div>R: {curQuestion.r}</div>
+                                <Button onClick={audioQ}>Q {curQuestion.q}</Button>
+                                <Button onClick={audioW}>W {curQuestion.e}</Button>
+                                <Button onClick={audioE}>E {curQuestion.w}</Button>
+                                <Button onClick={audioR}>R {curQuestion.r}</Button>
                             </div>
+                          <div className="Answer">
+                            <Form>
+                              <Form.Group controlId="name">
+                                  <Form.Control champion="Enter Champion Name"></Form.Control>
+                                  <Button onClick={validateAnswer}>Lock In</Button>
+                              </Form.Group>
+                            </Form>
+                          </div>
                         </div>
                         :
                         <div>
