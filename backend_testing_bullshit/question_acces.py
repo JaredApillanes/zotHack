@@ -1,7 +1,6 @@
 from flask_restful import Resource, reqparse
 from bson import json_util
 from bson.objectid import ObjectId
-from db import mongo
 
 import json
 
