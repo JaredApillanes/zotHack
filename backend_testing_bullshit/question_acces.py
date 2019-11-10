@@ -11,7 +11,7 @@ import random
 
 class Question(Resource):
     def __init__(self):
-        with open("questions.json", "r") as read_file:
+        with open("questions.json", "rb") as read_file:
             self.unlisted_champs = json.load(read_file)
 
     def get(self):
