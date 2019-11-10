@@ -12,7 +12,7 @@ function App() {
             <Router history={history}>
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    {/*<Route exact path='/Play' component={Play}/>*/}
+                    <Route exact path='/Play' component={Play}/>
                 </Switch>
             </Router>
         </div>
