@@ -8,6 +8,11 @@
   color: navajowhite;
 }
 
+.choices {
+  min-height: calc(12px + 2vmin);
+  min-width: 50vh;
+}
+
 .stopwatch {
   color: aqua;
 }

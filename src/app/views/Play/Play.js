@@ -1,12 +1,22 @@
 import React, {useState, useEffect} from "react";
+import Form from "react-bootstrap/Form";
 import './Play.css';
 
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 
 function PlayGame(props) {
-    function audio(e) {
-        document.getElementById("test").play();
+    function audioQ(e) {
+        document.getElementById("Q").play();
+    }
+    function audioW(e) {
+        document.getElementById("W").play();
+    }
+    function audioE(e) {
+        document.getElementById("E").play();
+    }
+      function audioR(e) {
+        document.getElementById("R").play();
     }
 
     const gameId = props.match.params.gameId;
@@ -26,6 +36,26 @@ function PlayGame(props) {
     const [displayQuestion, setDisplayQuestion] = useState(true);
     const [playersArr, setPlayersArr] = useState([]);
 
+    // Answer Validation
+    const [answer, setAnswer] = useState("e")
+    const [iscorrect, setIsCorrect] = useState(false);
+
+    function handleSubmit(e) {
+        props.history.push('/Play/');
+    }
+
+    function validateAnswer(champion) {
+        setAnswer(champion)
+        if (setAnswer === setIsCorrect) {
+          console.log("correct!")
+          console.log("+500pts!")
+          handleSubmit()
+        }
+        else{
+          console.log("incorrect!")
+        }
+    }
+
     function renderQuestion() {
         setInitialGet(true);
         axios.get('/game/' + gameId).then(res => {
@@ -40,7 +70,7 @@ function PlayGame(props) {
     function renderScores() {
         axios.get('/player/game/' + gameId).then(res => {
             setTimeLimit(10);
-            console.log(res.data)
+            console.log(res.data);
             setPlayersArr(res.data);
 
         }).catch(err => {
@@ -48,9 +78,23 @@ function PlayGame(props) {
         });
     }
 
+    function cycle() {
+      setIsCorrect(false)
+      setAnswer('e')
+      setDisplayQuestion(true);
+
+      /*      axios.get("/play/").then(res => {
+              const question = new Question();
+              const Given_URL_Q = question.get(ability)[0];
+              const Given_URL_W = question.wURL;
+              const Given_URL_E = question.eURL;
+              const Given_URL_R = question.rURL;*/
+    }
+
     useEffect(() => {
         if (!initialGet) {
             setInitialGet(true);
+            // setIsCorrect() TODO: get the correct answer and set it to setIsCorrect then compare
             renderQuestion();
         }
         if (!timeLimit || timeLimit < 1) {
@@ -81,15 +125,33 @@ function PlayGame(props) {
         <div className="Question">
             <div className="question-stopwatch">
                 <div>
+                    {/*<audio id={'Q'}> TODO: Uncomment and ensure that src URL are correctly matched*/}
+                    {/*    <source*/}
+                    {/*        src={Given_URL_Q}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
-                    <audio id={'test'}>
-                        <source
-                            src={"http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_vi_base/66_vi_base_r_dash_oba_01.wav"}
-                            type={"audio/wav"}>
-                        </source>
-                    </audio>
-                    <Button onClick={audio}>Test</Button>
+                    {/*<audio id={'W'}>*/}
+                    {/*    <source*/}
+                    {/*        src={Given_URL_W}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
+                    {/*<audio id={'E'}>*/}
+                    {/*    <source*/}
+                    {/*        src={Given_URL_E}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
+
+                    {/*<audio id={'R'}>*/}
+                    {/*    <source*/}
+                    {/*        src={Given_URL_R}*/}
+                    {/*        type={"audio/wav"}>*/}
+                    {/*    </source>*/}
+                    {/*</audio>*/}
 
                     <div className="stopwatch">{timeLimit}</div>
                     <div className="game-title">
@@ -100,11 +162,19 @@ function PlayGame(props) {
                         <div>
                             <p className="question">{curQuestion.question}</p>
                             <div className="choices">
-                                <div>Q: {curQuestion.q}</div>
-                                <div>W: {curQuestion.e}</div>
-                                <div>E: {curQuestion.w}</div>
-                                <div>R: {curQuestion.r}</div>
+                                <Button onClick={audioQ}>Q {curQuestion.q}</Button>
+                                <Button onClick={audioW}>W {curQuestion.e}</Button>
+                                <Button onClick={audioE}>E {curQuestion.w}</Button>
+                                <Button onClick={audioR}>R {curQuestion.r}</Button>
                             </div>
+                          <div className="Answer">
+                            <Form>
+                              <Form.Group controlId="name">
+                                  <Form.Control champion="Enter Champion Name"></Form.Control>
+                                  <Button onClick={validateAnswer}>Lock In</Button>
+                              </Form.Group>
+                            </Form>
+                          </div>
                         </div>
                         :
                         <div>
