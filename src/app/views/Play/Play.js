@@ -40,10 +40,21 @@ function PlayGame(props) {
     const [answer, setAnswer] = useState("e")
     const [iscorrect, setIsCorrect] = useState(false);
 
-    function validateAnswer(champion) {
-      setAnswer(champion)
+    function handleSubmit(e) {
+        props.history.push('/Play/');
     }
 
+    function validateAnswer(champion) {
+        setAnswer(champion)
+        if (setAnswer === setIsCorrect) {
+          console.log("correct!")
+          console.log("+500pts!")
+          handleSubmit()
+        }
+        else{
+          console.log("incorrect!")
+        }
+    }
 
     function renderQuestion() {
         setInitialGet(true);
@@ -59,7 +70,7 @@ function PlayGame(props) {
     function renderScores() {
         axios.get('/player/game/' + gameId).then(res => {
             setTimeLimit(10);
-            console.log(res.data)
+            console.log(res.data);
             setPlayersArr(res.data);
 
         }).catch(err => {
@@ -67,9 +78,23 @@ function PlayGame(props) {
         });
     }
 
+    function cycle() {
+      setIsCorrect(false)
+      setAnswer('e')
+      setDisplayQuestion(true);
+
+      /*      axios.get("/play/").then(res => {
+              const question = new Question();
+              const Given_URL_Q = question.get(ability)[0];
+              const Given_URL_W = question.wURL;
+              const Given_URL_E = question.eURL;
+              const Given_URL_R = question.rURL;*/
+    }
+
     useEffect(() => {
         if (!initialGet) {
             setInitialGet(true);
+            // setIsCorrect() TODO: get the correct answer and set it to setIsCorrect then compare
             renderQuestion();
         }
         if (!timeLimit || timeLimit < 1) {
@@ -100,30 +125,30 @@ function PlayGame(props) {
         <div className="Question">
             <div className="question-stopwatch">
                 <div>
-                    {/*<audio id={'Q'}>*/}
+                    {/*<audio id={'Q'}> TODO: Uncomment and ensure that src URL are correctly matched*/}
                     {/*    <source*/}
-                    {/*        src={"Given_URL_Q"}*/}
+                    {/*        src={Given_URL_Q}*/}
                     {/*        type={"audio/wav"}>*/}
                     {/*    </source>*/}
                     {/*</audio>*/}
 
                     {/*<audio id={'W'}>*/}
                     {/*    <source*/}
-                    {/*        src={"Given_URL_W"}*/}
+                    {/*        src={Given_URL_W}*/}
                     {/*        type={"audio/wav"}>*/}
                     {/*    </source>*/}
                     {/*</audio>*/}
 
                     {/*<audio id={'E'}>*/}
                     {/*    <source*/}
-                    {/*        src={"Given_URL_E"}*/}
+                    {/*        src={Given_URL_E}*/}
                     {/*        type={"audio/wav"}>*/}
                     {/*    </source>*/}
                     {/*</audio>*/}
 
                     {/*<audio id={'R'}>*/}
                     {/*    <source*/}
-                    {/*        src={"Given_URL_R"}*/}
+                    {/*        src={Given_URL_R}*/}
                     {/*        type={"audio/wav"}>*/}
                     {/*    </source>*/}
                     {/*</audio>*/}

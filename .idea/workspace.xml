@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="925841f7-6620-4fe2-bfbc-272b2496641a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/Play/Play.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Play/Play.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/Play/Play.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Play/Play.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573418672591</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added support for audio">
+      <created>1573428318877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573428318877</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +121,7 @@
     <MESSAGE value="added home page js" />
     <MESSAGE value="added username" />
     <MESSAGE value="added redirect" />
-    <option name="LAST_COMMIT_MESSAGE" value="added redirect" />
+    <MESSAGE value="added support for audio" />
+    <option name="LAST_COMMIT_MESSAGE" value="added support for audio" />
   </component>
 </project>
