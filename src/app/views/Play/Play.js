@@ -66,7 +66,7 @@ function PlayGame(props) {
       setDisplayQuestion(!displayQuestion);
     }
     const intervalId = setInterval(() => {
-      setTimeLimit(timeLimit - 1);
+      setTimeLimit(timeLimit + 1);
     }, 1000);
 
     return () => clearInterval(intervalId);
@@ -74,12 +74,12 @@ function PlayGame(props) {
 
 
   return (
-    <div className="Admin">
-      <div className="admin-card">
+    <div className="Question">
+      <div className="question-stopwatch">
         <div>
-          <div className="timer">{timeLimit}</div>
+          <div className="stopwatch">{timeLimit}</div>
           <div className="game-title">
-            <h1>HackHoot</h1>
+            <h1>Who's That Champion?</h1>
           </div>
 
           {displayQuestion ?
