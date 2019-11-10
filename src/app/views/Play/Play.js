@@ -1,114 +1,128 @@
-import React, { useState, useEffect }  from "react";
+import React, {useState, useEffect} from "react";
 import './Play.css';
 
 import axios from "axios";
+import Button from "react-bootstrap/Button";
 
 function PlayGame(props) {
-
-  const gameId = props.match.params.gameId;
-  const [initialGet, setInitialGet] = useState(false);
-  const [timeLimit, setTimeLimit] = useState(60);
-  const [curQuestion, setCurQuestion] = useState({
-    "_id": {
-      "$oid": " "
-    },
-    'question': ' ',
-    'A': ' ',
-    'B': ' ',
-    'C': ' ',
-    'D': ' ',
-    'answer': ' '
-  });
-  const [displayQuestion, setDisplayQuestion] = useState(true);
-  const [playersArr, setPlayersArr] = useState([]);
-
-  function renderQuestion () {
-    setInitialGet(true);
-    axios.get('/game/' + gameId).then(res => {
-      setTimeLimit(res.data["time_limit"]);
-      setCurQuestion(res.data["questions"][res.data["cur_question"]]);
-    }).catch(err => {
-
-      console.log("Failed to GET /game");
-    });
-  }
-
-  function renderScores () {
-    axios.get('/player/game/' + gameId).then(res => {
-      setTimeLimit(10);
-      console.log(res.data)
-      setPlayersArr(res.data);
-
-    }).catch(err => {
-      console.log("failed to GET /game");
-    });
-  }
-
-  useEffect(() => {
-    if (!initialGet) {
-      setInitialGet(true);
-      renderQuestion();
+    function audio(e) {
+        document.getElementById("test").play();
     }
-    if (!timeLimit || timeLimit < 1) {
-      if (displayQuestion) {
-        renderScores();
-      } else {
-        axios.put('/game/' + gameId).then(res => {
-          if (res.data["game_state"] !== "done") {
-            renderQuestion();
-          } else {
-            props.history.push('/admin/end-game/' + gameId);
-          }
+
+    const gameId = props.match.params.gameId;
+    const [initialGet, setInitialGet] = useState(false);
+    const [timeLimit, setTimeLimit] = useState(60);
+    const [curQuestion, setCurQuestion] = useState({
+        "_id": {
+            "$oid": " "
+        },
+        'question': ' ',
+        'A': ' ',
+        'B': ' ',
+        'C': ' ',
+        'D': ' ',
+        'answer': ' '
+    });
+    const [displayQuestion, setDisplayQuestion] = useState(true);
+    const [playersArr, setPlayersArr] = useState([]);
+
+    function renderQuestion() {
+        setInitialGet(true);
+        axios.get('/game/' + gameId).then(res => {
+            setTimeLimit(res.data["time_limit"]);
+            setCurQuestion(res.data["questions"][res.data["cur_question"]]);
         }).catch(err => {
-          console.log("Failed to update gamestate");
+
+            console.log("Failed to GET /game");
         });
-      }
-      setDisplayQuestion(!displayQuestion);
     }
-    const intervalId = setInterval(() => {
-      setTimeLimit(timeLimit + 1);
-    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, [timeLimit]);
+    function renderScores() {
+        axios.get('/player/game/' + gameId).then(res => {
+            setTimeLimit(10);
+            console.log(res.data)
+            setPlayersArr(res.data);
+
+        }).catch(err => {
+            console.log("failed to GET /game");
+        });
+    }
+
+    useEffect(() => {
+        if (!initialGet) {
+            setInitialGet(true);
+            renderQuestion();
+        }
+        if (!timeLimit || timeLimit < 1) {
+            if (displayQuestion) {
+                renderScores();
+            } else {
+                axios.put('/game/' + gameId).then(res => {
+                    if (res.data["game_state"] !== "done") {
+                        renderQuestion();
+                    } else {
+                        props.history.push('/admin/end-game/' + gameId);
+                    }
+                }).catch(err => {
+                    console.log("Failed to update gamestate");
+                });
+            }
+            setDisplayQuestion(!displayQuestion);
+        }
+        const intervalId = setInterval(() => {
+            setTimeLimit(timeLimit + 1);
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, [timeLimit]);
 
 
-  return (
-    <div className="Question">
-      <div className="question-stopwatch">
-        <div>
-          <div className="stopwatch">{timeLimit}</div>
-          <div className="game-title">
-            <h1>Who's That Champion?</h1>
-          </div>
+    return (
+        <div className="Question">
+            <div className="question-stopwatch">
+                <div>
 
-          {displayQuestion ?
-          <div>
-            <p className="question">{curQuestion.question}</p>
-            <div className="choices">
-              <div>A: {curQuestion.A}</div>
-              <div>B: {curQuestion.B}</div>
-              <div>C: {curQuestion.C}</div>
-              <div>D: {curQuestion.D}</div>
-            </div>
-          </div>
-          :
-          <div>
-            <p className="question">Scores</p>
-            <div>
-              {playersArr.map((p, i) => (
-                <div index={i} key={i}>
-                  <p>{p.name}: {p.points}</p>
+                    <audio id={'test'}>
+                        <source
+                            src={"http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_vi_base/66_vi_base_r_dash_oba_01.wav"}
+                            type={"audio/wav"}>
+                        </source>
+                    </audio>
+                    <Button onClick={audio}>Test</Button>
+
+
+                    <div className="stopwatch">{timeLimit}</div>
+                    <div className="game-title">
+                        <h1>Who's That Champion?</h1>
+                    </div>
+
+                    {displayQuestion ?
+                        <div>
+                            <p className="question">{curQuestion.question}</p>
+                            <div className="choices">
+                                <div>Q: {curQuestion.q}</div>
+                                <div>W: {curQuestion.e}</div>
+                                <div>E: {curQuestion.w}</div>
+                                <div>R: {curQuestion.r}</div>
+                            </div>
+                        </div>
+                        :
+                        <div>
+                            <p className="question">Scores</p>
+                            <div>
+                                {playersArr.map((p, i) => (
+                                    <div index={i} key={i}>
+                                        <p>{p.name}: {p.points}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    }
+
                 </div>
-              ))}
             </div>
-          </div>
-          }
-
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default PlayGame;
