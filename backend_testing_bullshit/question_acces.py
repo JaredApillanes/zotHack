@@ -16,7 +16,6 @@ class Question(Resource):
 
     def get(self):
         champ_num = random.randint(0, len(self.unlisted_champs) - 1)
-        print(champ_num)
         champion_question = self.unlisted_champs[champ_num]
         self.unlisted_champs.pop(champ_num)
         return champion_question

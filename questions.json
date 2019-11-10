@@ -1,28 +1,57 @@
-[
-    [
-      "Pantheon",
-      "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
-      "Name means 'Untrembling'",
-      "Has a secret dream of baking",
-      "something.jpg"
+{
+  "Pantheon": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
     ],
-    [
-      "Zilean",
-      "confirmed to be the last Icathian mage",
-      "During development he was called Narib Newmaiss",
-      "Has the quote: 'In my day, we would never have allowed an armored bear into the League of Legends'",
-      "something.mp3"
+    "hint1": "This champion is voiced by the same person that voiced Varus and Blood Lord Vladimir",
+    "hint2": "Name means 'Untrembling'",
+    "hint3": "Has a secret dream of baking"
+  },
+  "Zilean": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
     ],
-    [
-        "Senna"
+    "hint1": "confirmed to be the last Icathian mage",
+    "hint2": "During development he was called Narib Newmaiss",
+    "hint3": "Has the quote: 'In my day, we would never have allowed an armored bear into the League of Legends'"
+  },
+  "Senna": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
     ],
-    [
-        "Thresh"
+    "hint1": "big gun",
+    "hint2": "relic gun",
+    "hint3": "screaming cloud"
+  },
+  "Blitzcrank": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
     ],
-    [
-        "Blitzcrank"
+    "hint1": "hand",
+    "hint2": "hook",
+    "hint3": "man hook car man hook door"
+  },
+  "Thresh": {
+    " ability": [
+      "w",
+      "e",
+      "r",
+      "q"
     ],
-    [
-        "Caitlyn"
-    ]
-  ]
+    "hint1": "hand",
+    "hint2": "hook",
+    "hint3": "man hook car man hook door"
+  }
+}

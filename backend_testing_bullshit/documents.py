@@ -2,9 +2,10 @@ from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 import player
 
-import question_acces
+from question_acces import Question
 
 app = Flask(__name__)
+app.config['MONGO_URI'] = 'mongodb://localhost:27017/'
 api = Api(app)
 
 api.add_resource(Question, '/getquestion')
