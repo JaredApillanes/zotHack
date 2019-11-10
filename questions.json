@@ -118,5 +118,41 @@
     "hint1": "One of the few champions to apply CC on themself",
     "hint2": "Is technically nude",
     "hint3": "\"The cost of your life is one arrow.\""
+  },
+  "Kog'maw": {
+    "name": "Kog'Maw",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/21_kogmaw_causticspittle_oh_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/29_kogmaw_icathiansurprise_screa.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/44_kogmaw_voidooze_oc_2.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_kogmaw/32_kogmaw_livingartillery_fall_3.wav"
+    ],
+    "hint1": "Only Void-related champion without 'Void' in his title",
+    "hint2": "Terror coming... daddy coming!",
+    "hint3": "blinks one eye at a time and sometimes spins around in a manner resembling dogs chasing their own tail"
+  },
+  "Skarner": {
+    "name": "Skarner",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/36_skarner_fracture_oc_01.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/27_skarner_crystalexoskeleton_oc.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/61_skarner_virulentslash_oh_02.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_skarner/49_skarner_impale_oc_03.wav"
+    ],
+    "hint1": "My stinger brings ugly death.",
+    "hint2": "I... am... ancient! You are nothing more than an insect to me!",
+    "hint3": "Head is based on Evangelion Unit-01's from Neon Genesis Evangelion"
+  },
+  "Lissandra": {
+    "name": "Lissandra",
+    "ability": [
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/42_lissandra_base_glacialpath_om.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/49_lissandra_base_iceshard_oc_04.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/70_lissandra_base_ringoffrost_oh.wav",
+      "http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_lissandra_base/28_lissandra_base_frozentomb_ene.wav"
+    ],
+    "hint1": "between 8996 and 9996 years old",
+    "hint2": "I will bury the world in ice.",
+    "hint3": "I will restore Freljord's greatness."
   }
 }
