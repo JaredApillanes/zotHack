@@ -15,10 +15,9 @@ class Question(Resource):
             self.unlisted_champs = json.load(read_file)
 
     def get(self):
-        champ_num = random.randint(0, len(self.unlisted_champs) - 1)
-        champion_question = self.unlisted_champs[champ_num]
-        self.unlisted_champs.pop(champ_num)
-        return champion_question
+        selected_champ = random.choice(list(self.unlisted_champs.keys()))
+        print(selected_champ)
+        return self.unlisted_champs.pop(selected_champ)
         # if question:
         #     return json_util._json_convert(question), 200
         # return {'message': 'Question not found'}, 404

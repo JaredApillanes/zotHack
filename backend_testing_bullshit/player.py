@@ -51,10 +51,9 @@ class Player(Resource):
         return {'message': 'Player not found'}, 404
 
     def put(self, id, score):
-        data = Player.parser.parse_args()
-
         try:
             player = mongo.db.players.find_one({"_id": ObjectId(id)})
+            player.update_one
         except:
             return {'message': 'An error occured trying to look up this Player'}, 500
 
