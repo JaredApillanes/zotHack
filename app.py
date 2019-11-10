@@ -9,7 +9,7 @@ app.config['MONGO_URI'] = 'mongodb://localhost:27017/loQ'
 api = Api(app)
 
 api.add_resource(PlayerCreator, '/createplayer')
-api.add_resource(PlayerList, '/player/game/<string:game_id>')
+api.add_resource(PlayerList, '/player/list')
 api.add_resource(Player, '/player/<string:id>')
 
 
