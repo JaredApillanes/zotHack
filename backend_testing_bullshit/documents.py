@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
+import player
 
 app = Flask(__name__)
 api = Api(app)
@@ -57,6 +58,11 @@ class TodoList(Resource):
 api.add_resource(TodoList, '/todos')
 api.add_resource(Todo, '/todos/<todo_id>')
 
+api.add_resource(PlayerCreator, '/createplayer')
+api.add_resource(PlayerList, '/player/game/<string:game_id>')
+api.add_resource(Player, '/player/<string:id>')
 
 if __name__ == '__main__':
-    app.run(port=5000,debug=True)
+    from db import mongo
+    mongo.init_app(app)
+    app.run(port=5000, debug=True)
