@@ -37,16 +37,16 @@ function PlayGame(props) {
     const [playersArr, setPlayersArr] = useState([]);
 
     // Answer Validation
-    const [answer, setAnswer] = useState("e")
-    const [iscorrect, setIsCorrect] = useState(false);
+     const [answer, setAnswer] = useState("Pantheon")
+     const [iscorrect, setIsCorrect] = useState(false);
 
     function handleSubmit(e) {
-        props.history.push('/Play/');
+        props.history.push('/Score/');
     }
 
     function validateAnswer(champion) {
-        setAnswer(champion)
-        if (setAnswer === setIsCorrect) {
+        console.log(champion);
+        if (champion == 'pantheon') {
           console.log("correct!")
           console.log("+500pts!")
           handleSubmit()
@@ -78,6 +78,7 @@ function PlayGame(props) {
         });
     }
 
+    // pull the user
     function cycle() {
       setIsCorrect(false)
       setAnswer('e')
@@ -125,33 +126,33 @@ function PlayGame(props) {
         <div className="Question">
             <div className="question-stopwatch">
                 <div>
-                    {/*<audio id={'Q'}> TODO: Uncomment and ensure that src URL are correctly matched*/}
-                    {/*    <source*/}
-                    {/*        src={Given_URL_Q}*/}
-                    {/*        type={"audio/wav"}>*/}
-                    {/*    </source>*/}
-                    {/*</audio>*/}
+                    <audio id={'Q'}>
+                        <source
+                            src={'http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/59_pantheon_spearshot_oc_1.wav'}
+                            type={"audio/wav"}>
+                        </source>
+                    </audio>
 
-                    {/*<audio id={'W'}>*/}
-                    {/*    <source*/}
-                    {/*        src={Given_URL_W}*/}
-                    {/*        type={"audio/wav"}>*/}
-                    {/*    </source>*/}
-                    {/*</audio>*/}
+                    <audio id={'W'}>
+                        <source
+                            src={'http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/55_pantheon_leapbash_oh_1.wav'}
+                            type={"audio/wav"}>
+                        </source>
+                    </audio>
 
-                    {/*<audio id={'E'}>*/}
-                    {/*    <source*/}
-                    {/*        src={Given_URL_E}*/}
-                    {/*        type={"audio/wav"}>*/}
-                    {/*    </source>*/}
-                    {/*</audio>*/}
+                    <audio id={'E'}>
+                        <source
+                            src={'http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/54_pantheon_heartseeker_spear_2.wav'}
+                            type={"audio/wav"}>
+                        </source>
+                    </audio>
 
-                    {/*<audio id={'R'}>*/}
-                    {/*    <source*/}
-                    {/*        src={Given_URL_R}*/}
-                    {/*        type={"audio/wav"}>*/}
-                    {/*    </source>*/}
-                    {/*</audio>*/}
+                    <audio id={'R'}>
+                        <source
+                            src={'http://files.spectralcoding.com/files/misc/lolwavs/LoL_SFX_pantheon/43_pantheon_grandskyfall_land_2.wav'}
+                            type={"audio/wav"}>
+                        </source>
+                    </audio>
 
                     <div className="stopwatch">{timeLimit}</div>
                     <div className="game-title">
@@ -170,7 +171,7 @@ function PlayGame(props) {
                           <div className="Answer">
                             <Form>
                               <Form.Group controlId="name">
-                                  <Form.Control champion="Enter Champion Name"></Form.Control>
+                                  <Form.Control placeholder="Insert Champion Name"></Form.Control>
                                   <Button onClick={validateAnswer}>Lock In</Button>
                               </Form.Group>
                             </Form>
