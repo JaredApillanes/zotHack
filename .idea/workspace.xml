@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="925841f7-6620-4fe2-bfbc-272b2496641a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/Play/Play.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/Play/Play.js" afterDir="false" />
-    </list>
+    <list default="true" id="925841f7-6620-4fe2-bfbc-272b2496641a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../UCI '19-'20/zotHacks2019" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -112,12 +111,12 @@
       <option name="project" value="LOCAL" />
       <updated>1573431530615</updated>
     </task>
-    <task id="LOCAL-00007" summary="hard coded Pantheon">
-      <created>1573433207649</created>
+    <task id="LOCAL-00007" summary="fixed cors issue">
+      <created>1573433949084</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1573433207649</updated>
+      <updated>1573433949084</updated>
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
@@ -145,11 +144,11 @@
     <MESSAGE value="added support for audio" />
     <MESSAGE value="added framework for answer validation" />
     <MESSAGE value="more answer validation" />
-    <MESSAGE value="hard coded Pantheon" />
-    <option name="LAST_COMMIT_MESSAGE" value="hard coded Pantheon" />
+    <MESSAGE value="fixed cors issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed cors issue" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/zotHack$test_1.coverage" NAME="test_1 Coverage Results" MODIFIED="1573421854186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/zotHack$app.coverage" NAME="app Coverage Results" MODIFIED="1573430203189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zotHack$app.coverage" NAME="app Coverage Results" MODIFIED="1573433997654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

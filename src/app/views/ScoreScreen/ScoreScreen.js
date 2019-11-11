@@ -11,35 +11,36 @@ function ScoreScreen() {
     useEffect(() => {
         axios.get("http://localhost:5000/player/list").then(res => {
             console.log(res.data)
-             setUsers(res.data);
-                // .map((user, s) => (
-                //         <div index={s} key={s}>
-                //             <tr>
-                //                 <td>user.username</td>
-                //                 <td>user.score</td>
-                //             </tr>
-                //         </div>
-                //     ))
-        }).catch(() => {console.log("NOOOOO")})
+            setUsers(res.data);
+        }).catch(() => {
+            console.log("NOOOOO")
+        })
     }, []);
 
-        return (
-            <div class="App-header">
-                <Table class="Score">
-                    <thead>
-                    <th>
-                        USERNAME
-                    </th>
-                    </thead>
-                    <th>
-                        SCORE
-                    </th>
-                    <tbody>
-                    {JSON.stringify(users)}
-                    </tbody>
-                </Table>
-            </div>
-        )
-    }
+    return (
+        <div class="App-header">
+            <Table class="Score">
+                <thead>
+                <th>
+                    USERNAME
+                </th>
+                </thead>
+                <th>
+                    SCORE
+                </th>
+                <tbody>
+                {users.map((user, s) => (
+                    <div index={s} key={s}>
+                        <tr>
+                            <td>{user.name}</td>
+                            <td>{user.score}</td>
+                        </tr>
+                    </div>
+                ))}
+                </tbody>
+            </Table>
+        </div>
+    )
+}
 
-    export default ScoreScreen;
+export default ScoreScreen;
