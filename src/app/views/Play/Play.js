@@ -40,19 +40,20 @@ function PlayGame(props) {
      const [answer, setAnswer] = useState("Pantheon")
      const [iscorrect, setIsCorrect] = useState(false);
 
-    function handleSubmit(e) {
+    function handleFinish(e) {
         props.history.push('/Score/');
     }
 
-    function validateAnswer(champion) {
-        console.log(champion);
-        if (champion == 'pantheon') {
-          console.log("correct!")
-          console.log("+500pts!")
-          handleSubmit()
+    function handleSubmit(e) {
+        e.preventDefault();
+        let tempAnswer = e.target.elements.champion.value
+        setAnswer(tempAnswer)
+        if (tempAnswer == 'Pantheon') {
+            console.log('correct')
+            handleFinish();
         }
-        else{
-          console.log("incorrect!")
+        else {
+            console.log('incorrect')
         }
     }
 
@@ -169,10 +170,10 @@ function PlayGame(props) {
                                 <Button onClick={audioR}>R {curQuestion.r}</Button>
                             </div>
                           <div className="Answer">
-                            <Form>
-                              <Form.Group controlId="name">
+                            <Form className="champion-form" onSubmit={handleSubmit}>
+                              <Form.Group controlId="champion">
                                   <Form.Control placeholder="Insert Champion Name"></Form.Control>
-                                  <Button onClick={validateAnswer}>Lock In</Button>
+                                  <Button type='submit'>Lock In</Button>
                               </Form.Group>
                             </Form>
                           </div>
