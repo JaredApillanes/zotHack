@@ -22,6 +22,7 @@ class PlayerCreator(Resource):
             player_id = mongo.db.players.insert_one({
                 "name": data['name'],
                 "score": 0,
+                "questionController": None
             }).inserted_id
             player_created = mongo.db.players.find_one(
                 {"_id": player_id})

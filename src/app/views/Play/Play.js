@@ -21,7 +21,7 @@ function PlayGame(props) {
         document.getElementById("R").play();
     }
 
-    const gameId = props.match.params.gameId;
+    const playerID = localStorage.getItem("playerID");
     const [initialGet, setInitialGet] = useState(false);
     const [timeLimit, setTimeLimit] = useState(60);
     const [curQuestion, setCurQuestion] = useState({
@@ -56,7 +56,7 @@ function PlayGame(props) {
 
     function renderQuestion() {
         setInitialGet(true);
-        axios.get('/game/' + gameId).then(res => {
+        axios.get('/game/' + 1).then(res => {
             setTimeLimit(res.data["time_limit"]);
             setCurQuestion(res.data["questions"][res.data["cur_question"]]);
         }).catch(err => {
@@ -65,16 +65,6 @@ function PlayGame(props) {
         });
     }
 
-    function renderScores() {
-        axios.get('/player/game/' + gameId).then(res => {
-            setTimeLimit(10);
-            console.log(res.data);
-            setPlayersArr(res.data);
-
-        }).catch(err => {
-            console.log("failed to GET /game");
-        });
-    }
 
     useEffect(() => {
         if (!initialGet) {
@@ -83,13 +73,12 @@ function PlayGame(props) {
         }
         if (!timeLimit || timeLimit < 1) {
             if (displayQuestion) {
-                renderScores();
             } else {
-                axios.put('/game/' + gameId).then(res => {
+                axios.put('/game/' + 1).then(res => {
                     if (res.data["game_state"] !== "done") {
                         renderQuestion();
                     } else {
-                        props.history.push('/admin/end-game/' + gameId);
+                        props.history.push('/admin/end-game/' + 1);
                     }
                 }).catch(err => {
                     console.log("Failed to update gamestate");
