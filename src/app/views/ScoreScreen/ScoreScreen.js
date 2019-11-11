@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './ScoreScreen.css';
 import Table from "react-bootstrap/Table";
 
@@ -6,21 +6,22 @@ import axios from "axios";
 
 
 function ScoreScreen() {
+    const [users, setUsers] = useState([]);
 
-    const [allUsers, setAllUsers] = useState([]);
-    const [user, setUser] = useState({
-        'username': '',
-        'score': ''
-    });
-
-
-    function iterateUsers(e) {
-        axios.get("/player/list").then(res => {
-
-            }
-        );
-        return (<tr><td>Test</td></tr>)
-    }
+    useEffect(() => {
+        axios.get("http://localhost:5000/player/list").then(res => {
+            console.log(res.data)
+             setUsers(res.data);
+                // .map((user, s) => (
+                //         <div index={s} key={s}>
+                //             <tr>
+                //                 <td>user.username</td>
+                //                 <td>user.score</td>
+                //             </tr>
+                //         </div>
+                //     ))
+        }).catch(() => {console.log("NOOOOO")})
+    }, []);
 
         return (
             <div class="App-header">
@@ -34,14 +35,7 @@ function ScoreScreen() {
                         SCORE
                     </th>
                     <tbody>
-                    {allUsers.map((q, s) => (
-                        <div index={s} key={s}>
-                            <tr>
-                                <td>q.username</td>
-                                <td>q.score</td>
-                            </tr>
-                        </div>
-                    ))}
+                    {JSON.stringify(users)}
                     </tbody>
                 </Table>
             </div>
