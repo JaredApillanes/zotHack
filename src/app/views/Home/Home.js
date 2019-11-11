@@ -12,7 +12,7 @@ function Home(props) {
         e.preventDefault();
         let tempName = e.target.elements.name.value;
 
-        axios.post("localhost:5000/createplayer", {"name": tempName}).then((res) => {
+        axios.post("/createplayer", {"name": tempName}).then((res) => {
             localStorage.setItem("playerID", JSON.stringify(res.data));
         });
 

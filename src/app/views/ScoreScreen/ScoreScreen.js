@@ -9,7 +9,7 @@ function ScoreScreen() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/player/list").then(res => {
+        axios.get("/player/list").then(res => {
             console.log(res.data)
             setUsers(res.data);
         }).catch(() => {
