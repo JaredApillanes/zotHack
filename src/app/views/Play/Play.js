@@ -5,6 +5,8 @@ import './Play.css';
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 
+
+
 function PlayGame(props) {
     function audioQ(e) {
         document.getElementById("Q").play();
@@ -36,10 +38,6 @@ function PlayGame(props) {
     const [displayQuestion, setDisplayQuestion] = useState(true);
     const [playersArr, setPlayersArr] = useState([]);
 
-    // Answer Validation
-     const [answer, setAnswer] = useState("Pantheon")
-     const [iscorrect, setIsCorrect] = useState(false);
-
     function handleFinish(e) {
         props.history.push('/Score/');
     }
@@ -47,7 +45,6 @@ function PlayGame(props) {
     function handleSubmit(e) {
         e.preventDefault();
         let tempAnswer = e.target.elements.champion.value
-        setAnswer(tempAnswer)
         if (tempAnswer == 'Pantheon') {
             console.log('correct')
             handleFinish();
@@ -79,24 +76,9 @@ function PlayGame(props) {
         });
     }
 
-    // pull the user
-    function cycle() {
-      setIsCorrect(false)
-      setAnswer('e')
-      setDisplayQuestion(true);
-
-      /*      axios.get("/play/").then(res => {
-              const question = new Question();
-              const Given_URL_Q = question.get(ability)[0];
-              const Given_URL_W = question.wURL;
-              const Given_URL_E = question.eURL;
-              const Given_URL_R = question.rURL;*/
-    }
-
     useEffect(() => {
         if (!initialGet) {
             setInitialGet(true);
-            // setIsCorrect() TODO: get the correct answer and set it to setIsCorrect then compare
             renderQuestion();
         }
         if (!timeLimit || timeLimit < 1) {
